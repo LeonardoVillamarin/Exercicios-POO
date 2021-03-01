@@ -1,104 +1,109 @@
 package ExerciciosIntroducaoPOO.Exercicio6;
 
 public class Baralho {
-    int aux = 0;
-    Cartas[] cartas = new Cartas[52];
-    void imprimeBaralho(Baralho baralho){
-        for(int i = 0; i < 53; i++)
-        System.out.println(cartas[i].valor + " " + cartas[i].naipe);
-    }
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Ás";
-    cartas[aux].naipe = "Copas";
-    aux++;
-    for(int i = 1 ; i < 13; i++){
-        if(i == 1){
-            cartas[i] = new Cartas();
-            cartas[i].valor = "Ás";
+    Carta[] cartas = new Carta[52];
+    
+    void criaBaralho(Baralho baralho){ 
+        for(int i = 0 ; i < 13; i++){
+            if(i == 0){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Ás";
+            }
+            if(i > 0 && i < 10){
+                cartas[i] = new Carta();
+                cartas[i].valor = Integer.toString((i+1));
+            }
+            if(i == 10){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Valete";
+            }
+            if(i == 11){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Dama";
+            }
+            if(i == 12){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Rei";
+            }
             cartas[i].naipe = "Copas";
         }
-        else if(i > 1 && i < 10){
-        cartas[i] = new Cartas();
-        cartas[i].valor = Integer.toString(i);
-        cartas[i].naipe = "Copas";
+
+        for(int i = 13 ; i < 26; i++){
+            if(i == 13){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Ás";
+            }
+            if(i > 13 && i < 23){
+                cartas[i] = new Carta();
+                cartas[i].valor = Integer.toString((i % 13 + 1));
+            }
+            if(i == 23){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Valete";
+            }
+            if(i == 24){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Dama";
+            }
+            if(i == 25){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Rei";
+            }
+            cartas[i].naipe = "Espadas";
         }
-        else if()
-    }
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Valete";
-    cartas[aux].naipe = "Copas";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Dama";
-    cartas[aux].naipe = "Copas";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Rei";
-    cartas[aux].naipe = "Copas";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Ás";
-    cartas[aux].naipe = "Copas";
-    aux++;
 
-    for(aux ; aux < 10; aux++){
-        cartas[aux] = new Cartas();
-        cartas[aux].valor = Integer.toString(aux+1);
-        cartas[aux].naipe = "Espadas";
-    }
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Valete";
-    cartas[aux].naipe = "Espadas";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Dama";
-    cartas[aux].naipe = "Espadas";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Rei";
-    cartas[aux].naipe = "Espadas";
-    aux++;
+        for(int i = 26 ; i < 39; i++){
+            if(i == 26){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Ás";
+            }
+            if(i > 26 && i < 36){
+                cartas[i] = new Carta();
+                cartas[i].valor = Integer.toString((i % 13 + 1));
+            }
+            if(i == 36){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Valete";
+            }
+            if(i == 37){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Dama";
+            }
+            if(i == 38){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Rei";
+            }
+            cartas[i].naipe = "Ouros";
+        }
 
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Ás";
-    cartas[aux].naipe = "Ouros";
-    aux++;
-    for(aux ; aux < 10; aux++){
-        cartas[aux] = new Cartas();
-        cartas[aux].valor = Integer.toString(aux+1);
-        cartas[aux].naipe = "Ouros";
+        for(int i = 39 ; i < 52; i++){
+            if(i == 39){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Ás";
+            }
+            if(i > 39 && i < 49){
+                cartas[i] = new Carta();
+                cartas[i].valor = Integer.toString((i % 13 + 1));
+            }
+            if(i == 49){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Valete";
+            }
+            if(i == 50){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Dama";
+            }
+            if(i == 51){
+                cartas[i] = new Carta();
+                cartas[i].valor = "Rei";
+            }
+            cartas[i].naipe = "Paus";
+        }
     }
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Valete";
-    cartas[aux].naipe = "Ouros";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Dama";
-    cartas[aux].naipe = "Ouros";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Rei";
-    cartas[aux].naipe = "Ouros";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Ás";
-    cartas[aux].naipe = "Paus";
-    aux++;
-    for(aux ; aux < 10; aux++){
-        cartas[aux] = new Cartas();
-        cartas[aux].valor = Integer.toString(aux+1);
-        cartas[aux].naipe = "Paus";
+    void imprimeBaralho(Baralho baralho){
+        for(int i = 0; i < 52; i++){
+            System.out.println(cartas[i].valor + " " + cartas[i].naipe);
+        }
     }
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Valete";
-    cartas[aux].naipe = "Paus";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Dama";
-    cartas[aux].naipe = "Paus";
-    aux++;
-    cartas[aux] = new Cartas();
-    cartas[aux].valor = "Rei";
-    cartas[aux].naipe = "Paus";
-    aux++;
 }
+
