@@ -4,18 +4,11 @@ package ExerciciosConstrutores.Exercicio3;
  * Inscricao
  */
 public class Inscricao {
-    private Disciplina[] disciplinasCursadas;
-    private int CR;
-    private Aluno aluno;
+    Disciplina disciplina;
+    Aluno aluno;
 
-    Inscricao(Aluno aluno){
+    Inscricao(Aluno aluno, Disciplina disciplina){
         this.aluno = aluno;
-    }
-
-    public void getHistorico(Inscricao inscricao){
-
-    }
-    public void calculaCR(Inscricao inscricao){
-
+        this.disciplina = disciplina;
     }
 }

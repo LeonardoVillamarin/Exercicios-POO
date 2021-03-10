@@ -6,9 +6,11 @@ public class Turma {
     private Professor professor;
     private int quantidadeAlunos;
 
-    Turma(String nome, Aluno aluno, Professor professor){
+    Turma(String nome, Professor professor){    //Alunos são adicionados apenas após criação da turma, consequentemente a quantidade cresce junto com a adição de alunos
         this.nome = nome;
-        this.alunos[] = aluno;
         this.professor = professor;
+    }
+    void String getHorario(){
+
     }
 }

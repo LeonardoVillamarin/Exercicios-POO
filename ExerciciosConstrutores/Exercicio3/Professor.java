@@ -7,7 +7,7 @@ public class Professor {
         this.nome = nome;
     }
     
-    public float calculaMedia(Disciplina disciplina, String nomeAluno){
+    public float calculaMedia(String nomeAluno){
     
     }
 }
