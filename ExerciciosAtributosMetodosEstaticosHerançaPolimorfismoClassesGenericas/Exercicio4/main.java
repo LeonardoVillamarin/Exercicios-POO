@@ -2,7 +2,7 @@ package ExerciciosAtributosMetodosEstaticosHerançaPolimorfismoClassesGenericas.
 
 import java.util.ArrayList;
 
-public class main {
+public class main{
     public static void main(String[] args) {
         ArrayList<Figura> figuras = new ArrayList<Figura>();
         figuras.add(new Quadrado(3));
